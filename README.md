@@ -109,7 +109,7 @@ DATABASE = "WeatherEurope"
 5. Run the pipeline:
 python pipeline.py
 
----
+
 
 ## 👩‍💻 Author
 Flávia de Castro | Data Engineering Student
