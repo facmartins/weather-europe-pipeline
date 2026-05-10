@@ -39,6 +39,7 @@ print(f"\n✅ Total records extracted: {len(all_data)}")
 # TRANSFORM
 df = pd.DataFrame(all_data)
 df = df.drop_duplicates()
+df["name"] = df["name"].str.strip()
 df = df.dropna(subset=["temperature", "wind", "precipitation"])
 df["date"] = pd.to_datetime(df["date"])
 df["temperature"] = df["temperature"].round(2)
@@ -48,6 +49,8 @@ df["precipitation"] = df["precipitation"].round(2)
 print("\n📊 Transformed data:")
 print(df.head(10))
 print(f"\n✅ Total records after transform: {len(df)}")
+
+
 
 # LOAD
 print("🔄 Starting Load...")
