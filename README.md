@@ -62,12 +62,11 @@ it into SQL Server for analysis.
 ---
 
 ## 📁 Project Structure
-pipeline.py           # ETL pipeline
-config.py             # Cities and server config (not included)
-create_tables.sql     # SQL Server table creation
-analysis_queries.sql  # SQL analysis queries
-README.md             # Project documentation
-
+├── pipeline.py           # ETL pipeline
+├── config.py             # Cities and server config (not included)
+├── create_tables.sql     # SQL Server table creation
+├── analysis_queries.sql  # SQL analysis queries
+└── README.md             # Project documentation
 ---
 
 ## 📊 SQL Analysis
