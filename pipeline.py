@@ -70,7 +70,7 @@ for city in CITIES:
         IF NOT EXISTS (SELECT 1 FROM City WHERE name = ?)
         INSERT INTO City (name, country, latitude, longitude)
         VALUES (?, ?, ?, ?)
-    """, city["name"], city["name"], city["country"], city["latitude"], city["longitude"])
+    """, city["name"], city["country"], city["latitude"], city["longitude"])
 
 conn.commit()
 
