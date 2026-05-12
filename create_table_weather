@@ -1,0 +1,29 @@
+-- criar database: 
+CREATE DATABASE WeatherEurope;
+GO
+
+--usar database:
+USE WeatherEurope;
+GO
+
+--criar tabelas:
+CREATE TABLE City (
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	country VARCHAR(100) NOT NULL,
+	latitude FLOAT NOT NULL,
+	longitude FLOAT NOT NULL
+	);
+GO
+
+CREATE TABLE Weather (
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	city_id INT NOT NULL FOREIGN KEY REFERENCES city(id),
+	date DATE NOT NULL,
+	temperature FLOAT NOT NULL,
+	precipitation FLOAT NOT NULL,
+	wind_speed FLOAT NOT NULL
+	);
+GO
+
+SELECT * FROM Weather;
